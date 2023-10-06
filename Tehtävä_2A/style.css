@@ -1,0 +1,47 @@
+img {
+  width: 100%; 
+  max-width: 500px;
+  float: center;  
+  margin-left: 100px;
+  margin-bottom:1px;
+}
+
+div {
+  background: #f0f0f0;
+}
+
+p {
+  font-family: Arial, sans-serif;
+}
+
+..fancy1 {
+  color: red;
+}
+
+.fancy2 {
+  color: lightblue;
+}
+
+.fancy3 {
+  color: lightgreen;
+}
+
+.linkstyle {
+  color: #333333;
+}
+
+
+#eka-laatikko {
+  background-color: red;
+}
+
+body {
+  margin: 0 auto; 
+  max-width: 700px;
+}
+
+#toka-laatikko {
+  background-color: lightblue;
+}
+#kolmas-laatikko {
+  background-color: lightgreen;
