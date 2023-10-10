@@ -2,7 +2,7 @@ img {
   width: 100%; 
   max-width: 500px;
   float: center;  
-  margin-left: 100px;
+  margin-left: 60px;
   margin-bottom:1px;
 }
 
@@ -14,7 +14,7 @@ p {
   font-family: Arial, sans-serif;
 }
 
-..fancy1 {
+.fancy1 {
   color: red;
 }
 
@@ -30,14 +30,13 @@ p {
   color: #333333;
 }
 
-
-#eka-laatikko {
-  background-color: red;
-}
-
 body {
   margin: 0 auto; 
   max-width: 700px;
+}
+
+#eka-laatikko {
+  background-color: red;
 }
 
 #toka-laatikko {
