@@ -1,0 +1,373 @@
+
+
+
+ /*----------------------------*/
+ /*                            */
+ /*  EDIT THIS FILE TO APPLY   */
+ /*  YOUR DESIRED STYLE!       */
+ /*                            */
+ /*----------------------------*/
+
+
+
+/*--------- BACKGROUND ---------------------*/
+
+html { 
+	/*koko sivun tausta on valkoinen.
+	Muuta haluamaksesi*/
+	background: #FFE4E1; 
+	/*Jos määrität html-tagissa fontteja, 
+	taustavärejä tai tekstin värejä,
+	samat määritykset tulevat kaikkiin sisällä oleviin
+	elementteihin. Näin voit määrittää esim. koko sivun 
+	fontit, värit ym. ja sitten muuttaa haluamissasi
+	elementeissä tyylin toiseksi.*/
+
+
+}
+
+body { 
+	
+	/*Kaiken sisällön ympärillä on body. 
+	Voit muuttaa myös bodyn taustaväriä tai
+	esim. lisätä paddingin, jotta elementit eivät 
+	olisi reunassa kiinni.*/
+	
+	/*Tällä koodilla voit tehdä niin, että yli 900px
+	leveässä näytössä body-tagi jää vain 900px leveäksi,
+	ja reunoille jää tyhjää. Voit muuttaa tätä miten haluat.*/
+	max-width: 900px;
+	margin: auto; /*tämä keskittää body-tagin sivusuunnassa*/
+
+}
+
+/*--------- HEADER ---------------------*/
+
+/*Header text on top of the menu*/
+header h1 { 
+	/*Pääotsikko*/
+
+	/*Täällä kannattaa muokata background-, color- 
+	font-size- ja font-family-arvoja.*/
+
+	/*Laita myös ja marginaalit paddingit paremmin, 
+	niin näyttää tyylikkäämmältä */
+
+	/*Voit halutessasi myös esim. keskittää otsikon (text-align: center;)*/
+	font-family: 'Comic Sans MS', serif;
+	font-size: 50px;
+	color: #333;
+	margin: 3; 
+    padding: 10px 0; 
+	text-align: center;
+	background: #FFE4E1;
+	
+	
+}
+
+
+/* cat paw -symboli otsikon vasemmalle puolelle */
+header h1::before {
+    content: '\1F43E'; /* Cat paw symbol */
+    font-size: 40px;
+    margin-right: 10px; /* Välimarginaali otsikon ja symbolin välillä */
+}
+/*--------- MAIN MENU ---------------------*/
+
+/*Menu*/
+
+#main-menu {
+    list-style-type: none;
+    display: flex;
+    /* Lisätään tähän flex-wrap: wrap; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px; /* Lisätään hieman sisennystä */
+    border-radius: 5px;
+}
+
+	
+	
+	/*Voit tehdä tästä flexboxin, 
+	niin valikon napit menevät vierekkäin*/
+
+	/*Laita tässä ja marginaalit paddingit paremmin, 
+	niin näyttää tyylikkäämmältä */
+	
+	/*Voi muokata täällä myös background-, color-arvoja.*/
+		
+}
+
+/*Menu item*/
+
+
+/*Laita tässä ja marginaalit paddingit paremmin, 
+	niin näyttää tyylikkäämmältä */
+
+	/*Voi muokata täällä myös background-, color-arvoja.*/
+
+}
+
+/*Link in menu item*/
+
+#main-menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#main-menu li {
+    margin: 10px;
+    text-align: left; /* Laatikot vasemalla kun ikkuna kapenee */	
+}
+
+#main-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #FFDEE3;
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#main-menu li a:hover {
+    color: transparent;
+    position: relative;
+}
+
+#main-menu li a:hover::before {
+    content: '\1F43E'; /* Cat paw symbol */
+    font-size: 17px;
+    color: #333; /* Tummanharmaa fonttiväri */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#main-menu li:hover {
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 600px) {
+    #main-menu li {
+        width: 100%;
+		justify-content: space-evenly;
+    }
+}
+
+
+
+
+
+
+/*------- ARTICLE BUTTONS -------------------*/
+/*Button in end of each article*/
+.button {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #FFDEE3; /* Vaaleanpinkki tausta */
+    border-radius: 5px; /* Pyöristetyt kulmat */
+	color: #333;
+    font-size: 13px;
+    font-family: 'Comic Sans MS', sans-serif;
+	padding: 3px;
+ 
+}
+}
+
+
+
+
+
+	/*saatat haluta tehdä napista aika samanlaisen
+	kuin valikkolinkit, mutta toisenlainenkin 
+	voi olla ihan tyylikäs*/
+
+	/*Voi muokata täällä myös background-, color- 
+	font-size- ja font-family-arvoja.*/
+	
+	/*Tämä on a-elementti, ja se on oletuksena 
+		display: inline; 
+	Siksi sen kokoa tai paikkaa ym. ei voi muuttaa.
+	Jotta nappia on helpompi käsitellä, voi muuttaa sen 
+		display: block;
+		
+	Ymmärtääksesi paremmin mitä on block ja inline ym., 
+	katso tämä video: https://www.youtube.com/watch?v=9T8uxp5hQ60	
+	*/
+
+	/*Tällä koodilla saat fancyn varjon :) 
+		box-shadow: 0px 2px 10px rgba(0,0,0,50%); 
+	*/
+
+
+}
+
+/*Button when mouse over*/
+.button:hover { 
+    background: #FFDEE3; /* Taustaväri */
+	
+}
+
+
+.button:hover::before {
+    content: '\1F43E'; /* Cat paw symbol */
+    font-size: 13px;
+
+    
+}
+
+
+
+/*--------- ARTICLES ---------------------*/
+
+/*Artikkeleiden ympärillä*/
+main {
+	/*Kaikki "artikkelit" ovat main-tagin sisällä.
+	Jos pidät tämän flexboxina, artikkelit menevät
+	vierekkäin leveässä näytössä. 
+	ja sitten artikkeleihin (ks. alla) esim. ,
+	jolloin artikkelit asettuvat vierekkäin.*/
+	display: flex;
+	flex-wrap:wrap; 
+	justify-content: center;
+
+}
+
+
+/* Jokainen"artikkeli" laatikko */
+article {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    max-width: calc(33.3333% - 20px);
+    margin: 10px;
+    padding: 20px 20px 25px;
+    background-color: #FFDEE3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    article {
+        max-width: calc(50% - 20px); /* Kaksi artikkelia rinnakkain */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    article {
+        max-width: calc(100% - 20px); /* Yksi artikkeli kerrallaan */
+    }
+}
+
+	
+}	/*Jos main on flexbox, 
+	tämä tekee sen, että "artikkelit" mahtuvat vierekkäin.*/
+	
+	
+	
+	/*Yksittäisen artikkelin tausta:
+	Saatat haluta  muokata täällä background-, color- 
+	sekä font-size- ja font-family-arvoja.*/
+
+	/*Tärkeää: Laita tässä marginaalit ja paddingit paremmin, 
+	niin näyttää tyylikkäämmältä! Teksti, kuva ym. ei saa olla 
+	reunaan asti, vaan reunassa pitää olla marginaali (teknisesti
+	margin tai padding).*/
+
+
+/*article title*/
+article h2 { 
+	font-family:'Comic Sans MS', sans-serif;
+    font-size: 19px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333; /* Tummanharmaa fonttiväri */
+	
+	/*Yksittäisen artikkelin otsikko*/
+
+	/*Kannattaa muokata täällä background-, color- 
+	font-size- ja font-family-arvoja.*/
+
+	/*Saatat haluta muokata täällä myös 
+	background-, color-, margin- ja padding-
+	font-size- ja font-family-arvoja.*/
+
+}
+
+/* cat paw -symboli otsikon vasemmalle puolelle */
+article h2::before {
+    content: '\1F43E'; /* Cat paw symbol */
+    font-size: 17px;
+	font-family: 'Comic Sans MS', sans-serif;
+    margin-right: 3px; /* Välimarginaali otsikon ja symbolin välillä */
+}
+
+
+
+
+
+/*article text*/
+article p { 
+	font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333; /* Tummanharmaa fonttiväri */
+    /*border-top: 1px solid #FFC0CB; /* Vaaleanpunainen rivi yläreunaan */
+	
+	
+   
+	/*Artikkelin pienempi teksti*/
+
+	/*Saatat haluta muokata täällä 
+	background-, color-, margin- ja padding-
+	font-size- ja font-family-arvoja.*/
+
+}
+
+/* "Images" */
+.article-image { 
+padding-bottom: 10px; 
+    max-width: 90%;
+    display: block; /* Aseta kuva blokkielementiksi, jotta voit käyttää marginaaleja */
+    margin: 0 auto; /* Aseta vaakasuuntainen marginaali (0 auto) keskelle */
+}
+
+    /*Tämä tekee sen, että kuva ei mene yli reunasta.*/
+	/*Kuva voi olla koko artikkelin levyinen tai pienempi. 
+	Esim. alla olevalla kuvasta tulisi pienempi (=50%)
+	ja teksti kiertää kuvaa (=float):
+		width: 50%;
+		min-width: 150px;
+		float: center; 
+	*/
+
+
+/*-------- FOOTER ---------------*/
+
+
+footer {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+	font-family: 'Comic Sans MS', sans-serif;
+	font-size: 14px;
+    margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #333;
+    padding: 5px 0;
+    background: #FFDEE3;
+    border-radius: 5px;
+    text-align: left;
+	
+}
+
