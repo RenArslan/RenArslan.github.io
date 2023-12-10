@@ -1,14 +1,20 @@
 /* styles.css */
 
 /* Yleinen taustaväri */
+
 html {
   background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Body-elementti */
-body { 
-  max-width: 900px;
-  margin: auto;
+body {
+  width: 100%;
   position: relative; /* Lisää position: relative; */
 }
 
@@ -17,232 +23,247 @@ header {
   position: relative;
   overflow: hidden;
   z-index: 1; /* Aseta z-indeksi pienemmäksi kuin artikkelilaatikoilla */
+  height: 700px;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-
 .header-background {
-			  position: absolute;
-			  top: 0;
-			  left: 0;
-			  width: 100%;
-			  height: 100%;
-			  z-index: -1;
-			  opacity: 10;
-			}    
-			
-
-			.header-background img {
-			  width: 100%;
-			  height: 100%;
-			  object-fit: cover;
-			}
-
-
-/* Body-elementti */
-body {
-  max-width: 900px;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 10;
+  background-image: url("media/tausta.jpeg");
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* Headerin otsikko */
-
-
 header h1 {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 75px;
   color: #555;
-  margin: 10;
-  padding: 10px 0px;
   text-align: left;
-  max-width: 400px;
-  padding-left: 10px; /* Lisätään padding vasemmalle reunalle */
- 
-
+  padding-left: 20px; /* Lisätään padding vasemmalle reunalle */
 }
 
-
-span.highlight {
+.highlight {
   background-color: orange;
   color: white;
-  padding: 5px 10px;
+  width: fit-content;
   z-index: 1; /* Varmistaa, että teksti on päällimmäisenä */
 }
 
+.highlight-polkku {
+  width: fit-content;
+  z-index: 1;
+  margin-top: 30px;
+  font-size: 40px;
+}
 
 #main-menu {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 10px;
-    
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 #main-menu li {
-    margin: 10px;
-    text-align: left; /* Laatikot vasemalla kun ikkuna kapenee */	
+  margin: 10px;
+  text-align: left; /* Laatikot vasemalla kun ikkuna kapenee */
 }
 
 #main-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    background: ;
-    padding: 8px 15px;
-   
-   
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  /* background: ; */
+  padding: 8px 15px;
 }
 
 #main-menu li a:hover {
-    background-color: transparent;
-    position: relative;
+  background-color: transparent;
+  position: relative;
 }
-
 
 #main-menu li:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-
 @media screen and (max-width: 600px) {
-    #main-menu li {
-        width: 100%;
-		justify-content: space-evenly;
-    }
+  #main-menu li {
+    width: 100%;
+  }
 }
 
 .icon-image {
-    float: left;
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
-    /* Lisää muita tyyliominaisuuksia tarpeen mukaan */
+  float: left;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  /* Lisää muita tyyliominaisuuksia tarpeen mukaan */
 }
-
-
-
-
-
-
 
 /*Artikkeleiden ympärillä*/
 main {
-	
-	display: flex;
-	flex-wrap:wrap; 
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 /* Jokainen "artikkeli" laatikko */
 article {
-    max-width: calc(33.3333% - 20px);
-    margin: 10px;
-    padding: 5px 10px 20px;
-    background-color: white;
-    box-sizing: border-box;
-    min-height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-
-    position: relative; /* Aseta position: relative; jotta z-indeksiä voidaan käyttää */
-    z-index: 2; /* Aseta z-indeksi suuremmaksi kuin headerilla */
-    top: -40px; /* Siirrä artikkelilaatikot ylöspäin halutun verran */
+  max-width: calc(33.3333% - 20px);
+  margin: 10px;
+  padding: 5px 10px 20px;
+  background-color: white;
+  box-sizing: border-box;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: relative; /* Aseta position: relative; jotta z-indeksiä voidaan käyttää */
+  z-index: 2; /* Aseta z-indeksi suuremmaksi kuin headerilla */
+  top: -40px; /* Siirrä artikkelilaatikot ylöspäin halutun verran */
 }
 
-
 @media only screen and (max-width: 900px) {
-    article {
-        max-width: calc(50% - 20px); /* Kaksi artikkelia rinnakkain */
-    }
+  article {
+    max-width: calc(50% - 20px); /* Kaksi artikkelia rinnakkain */
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    article {
-        max-width: calc(100% - 20px); /* Yksi artikkeli kerrallaan */
-    }
+  article {
+    max-width: calc(100% - 20px); /* Yksi artikkeli kerrallaan */
+  }
 }
 
-
-
-
 /*article title*/
-article h2 { 
-	font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    padding: 10px;
-    margin-top: 5px;
-    color: #333; /* Tummanharmaa fonttiväri */
+article h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 5px;
+  color: #333; /* Tummanharmaa fonttiväri */
 }
 
 article h2 {
-    clear: both; /* Estä otsikkoa menemästä kuvan ohi */
+  clear: both; /* Estä otsikkoa menemästä kuvan ohi */
 }
 
 /*article text*/
-article p { 
-	font-family: 'Lato', sans-serif;
-    font-size: 13px;
-    padding: 10px;
-    margin-bottom: 5px; /* Vähennä alapuolelle seuraavan otsikon kanssa */
-    color: #333; /* Tummanharmaa fonttiväri */
+article p {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  padding: 10px;
+  margin-bottom: 5px; /* Vähennä alapuolelle seuraavan otsikon kanssa */
+  color: #333; /* Tummanharmaa fonttiväri */
 }
 
 /* "Images" */
-.article-image { 
-    float: left;
-    margin-top: 10px; /* Lisää tilaa yläpuolelle */
-    margin-right: 20px;
-    max-width: 40%;
+.article-image {
+  float: left;
+  margin-top: 10px; /* Lisää tilaa yläpuolelle */
+  margin-right: 20px;
+  max-width: 40%;
 }
 
-
 #contact {
-	position: right;
-    margin: 10px;
-    padding: 20px;
-    background-color: whitesmoke;
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: right;
+  margin: 10px;
+  padding: 20px;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 #contact h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .contact-card p {
-    font-family: 'Lato', sans-serif;
-    font-size: 12px;
-    padding-left: 25px;
-    position: relative;
-    color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
 }
-
-
 
 /*-------- FOOTER ---------------*/
 
-
 footer {
- 
-	font-family: 'Lato', sans-serif;
-	font-size: 12px;
-    margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-    padding: 18px 0;
-	padding-left: 10px;
-    text-align: left;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background: #555;
-    border-radius: 10px;
-	color: white;
-    text-align: left;
-    
-        }
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 18px 0;
+  padding-left: 10px;
+  text-align: left;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background: #555;
+  border-radius: 10px;
+  color: white;
+  text-align: left;
+}
+
+.scroll-btn {
+  width: 90px;
+  height: 10mm;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Lato";
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header2-background {
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 10;
+  height: 600px;
+  background-image: url("media/tausta2.jpeg");
+  width: 100%;
+  margin-top: -10px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#tausta-2 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  z-index: -1;
+  opacity: 10;
+  width: 100%;
+  height: 100%;
+}
